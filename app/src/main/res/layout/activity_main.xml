@@ -36,7 +36,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/actions_adv"
             android:layout_marginStart="8dp"
-            android:layout_marginEnd="100dp"
+            android:layout_marginEnd="96dp"
             android:layout_marginBottom="8dp"
             android:orientation="vertical"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -132,7 +132,7 @@
 
             <LinearLayout
                 android:id="@+id/numbers_0"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
@@ -149,6 +149,13 @@
                     android:layout_height="wrap_content"
                     android:onClick="buttonClicked"
                     android:text="0" />
+
+                <Button
+                    android:id="@+id/btn_equal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="buttonClicked"
+                    android:text="=" />
 
 
             </LinearLayout>
@@ -193,13 +200,6 @@
                 android:onClick="buttonClicked"
                 android:text="-" />
 
-            <Button
-                android:id="@+id/btn_equal"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:onClick="buttonClicked"
-                android:text="=" />
-
 
         </LinearLayout>
 
@@ -207,9 +207,12 @@
             android:id="@+id/actions_adv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
             android:orientation="horizontal"
             app:layout_constraintBottom_toTopOf="@+id/numbers_all"
-            app:layout_constraintEnd_toStartOf="@+id/actions_simple">
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
 
             <Button
                 android:id="@+id/btn_C"
@@ -232,17 +235,14 @@
                 android:onClick="buttonClicked"
                 android:text="%" />
 
-        </LinearLayout>
+            <Button
+                android:id="@+id/eng"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="engineerSwitchClicked"
+                android:text="Eng" />
 
-        <Button
-            android:id="@+id/eng"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="176dp"
-            android:onClick="engineerSwitchClicked"
-            android:text="Eng"
-            app:layout_constraintBottom_toTopOf="@+id/actions_adv"
-            app:layout_constraintEnd_toStartOf="@+id/actions_simple" />
+        </LinearLayout>
 
         <TextView
             android:id="@+id/textView"
@@ -296,8 +296,10 @@
             android:id="@+id/Engineer"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
             android:visibility="visible"
-            app:layout_constraintBottom_toTopOf="@+id/actions_simple"
+            app:layout_constraintBottom_toTopOf="@+id/actions_adv"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent">
 
@@ -314,6 +316,13 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent">
 
+
+                    <Button
+                        android:id="@+id/button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Deg" />
 
                     <Button
                         android:id="@+id/button8"
